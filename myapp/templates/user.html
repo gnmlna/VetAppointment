@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Pawesome Veterinary Clinic</title>
+        <link rel="icon" type="image/x-icon" href="{% static 'images/icons/favicon.ico' %}" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Pawesome Veterinary Clinic</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Our Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'appointment' %}">Appointment</a></li>
+                        <li class="nav-item"><a class="nav-link">Hello, {{request.user}}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Pawesome Veterinary Clinic</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5"><p id="text-to-speech">Where Care Meets a Pawsitive Experience                        </p></h2>
+                        <a class="btn btn-primary" href="#about">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">About Us</h2>
+                        <p id="speech-personal" class="text-white-50">
+                            Welcome to Pawesome Veterinary Clinic!
+                            <br><br>
+                            At Pawesome Veterinary Clinic, we are dedicated to providing compassionate and comprehensive care for your beloved pets. With a team of experienced veterinarians and caring staff, we strive to create a warm and welcoming environment where both pets and their owners feel valued and respected.
+                            <br><br>
+                            Our mission is to promote the health and well-being of your furry family members through personalized veterinary services tailored to their individual needs. From preventive care and wellness exams to advanced diagnostics and surgical procedures, we offer a wide range of services to keep your pets happy and healthy at every stage of life.
+                            <br><br>
+                            At Pawsome Veterinary Clinic, we understand that your pets are more than just animals – they're cherished members of your family. That's why we're committed to building lifelong relationships with our clients based on trust, communication, and exceptional veterinary care.
+                            <br><br>
+                            Thank you for choosing Pawsome Veterinary Clinic. We look forward to serving you and your pets!
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{% static 'images/aboutUs.jpg' %}" alt="..." />
+            </div>
+        </section>
+
+        <!-- projects -->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7">
+                        <img class="img-fluid mb-3 mb-lg-0" src="{% static 'images/vet_bg.jpg' %}" alt="..." />
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Wellness Services</h4>
+                            <p id="wellness-speech" class="text-black-50 mb-0" style="text-align: justify;">
+                                &bull; Regular check-ups to assess your pet's overall health and detect any potential issues early.<br>
+                                &bull; Administering vaccines to prevent common diseases and keep your pet healthy.<br>
+                                &bull; Teeth cleaning, extractions, and other dental procedures to maintain your pet's oral health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        <!-- Project One Row-->
+        <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="{% static 'images/emergencycr.jpg' %}" alt="..." />
+            </div>
+            <div class="col-lg-6">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">Emergency Care</h4>
+                            <p id="emergency-speech" class="mb-0 text-white-50" style="text-align: justify;">
+                                &bull; 24/7 emergency services for accidents, injuries, and sudden illnesses.<br>
+                                &bull; Various surgical procedures, including soft tissue surgeries, orthopedic surgeries, and tumor removals.<br>
+                                &bull; X-rays, blood tests, urinalysis, and other diagnostic procedures to assess your pet's health.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Project Two Row-->
+        <div class="row gx-0 justify-content-center">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="{% static 'images/supportivecr.jpg' %}" alt="..." />
+            </div>
+            <div class="col-lg-6 order-lg-first">
+                <div class="bg-black text-center h-100 project">
+                    <div class="d-flex h-100">
+                        <div class="project-text w-100 my-auto text-center text-lg-right">
+                            <h4 class="text-white">Supportive Care</h4>
+                            <p id="supportive-speech" class="mb-0 text-white-50" style="text-align: justify;">
+                                &bull; Guidance on proper nutrition for your pet's age, breed, and health condition.<br>
+                                &bull; Prevention and treatment of parasites such as fleas, ticks, heartworms, and intestinal worms.<br>
+                                &bull; Bathing, brushing, nail trimming, and other grooming services to keep your pet clean and comfortable.<br>
+                                &bull; Safe and comfortable boarding facilities for pets when owners are away.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>         
+        
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-8 mx-auto text-center">
+                        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                        <h2 class="text-white mb-5">Send us an Email!</h2>
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form class="form-signup" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Email address input-->
+                            <div class="row input-group-newsletter">
+                                <div class="col"><input class="form-control" id="emailAddress" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                                <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">CONTACT US!</button></div>
+                            </div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">An email is required.</div>
+                            <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">Email is not valid.</div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3 mt-2 text-white">
+                                    <div class="fw-bolder">Email submission successful!</div>
+                                    Thank you for reaching out! We will get back to you as soon as possible. 
+                                    <br />
+                                    <!-- <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a> -->
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Address</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">1234 Araneta Cubao, Quezon City, Manila Philippines</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">pawesomeclinic@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Phone</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">091234678910</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#!"><i class="fab fa-google mail"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <a class="mx-2" href="#!"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Pawesome Vetenerary Clinic</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        
+    </body>
+</html>
